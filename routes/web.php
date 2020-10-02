@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('boeks/{boek}/delete', 'BoekController@delete')
+    ->name('boeks.delete');
+Route::resource('/boeks', 'BoekController');
