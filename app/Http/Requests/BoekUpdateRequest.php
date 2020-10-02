@@ -25,7 +25,7 @@ class BoekUpdateRequest extends FormRequest
     {
         $boek = $this->route('boek');
         return [
-            'name' => 'required|string|max:100|unique:boeks,name'.$boek->id,
+            'name' => 'required|string|max:100|unique:boeks,name',
             'description' => 'required',
             'pagina' => 'required|numeric|max:999'
         ];
